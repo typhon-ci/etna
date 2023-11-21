@@ -22,8 +22,6 @@
     enable = true;
     hashedPassword = "dff8e62c85e0c51717518d5d7d2a34abfa332e582a9cf73fb4dc9be080840047";
     domain = "etna.typhon-ci.org";
-    webroot = "";
-    https = true;
   };
 
   services.nginx.virtualHosts."etna.typhon-ci.org" = {
