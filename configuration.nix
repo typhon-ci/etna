@@ -9,6 +9,11 @@
     ./disk-config.nix
   ];
 
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
   boot.loader.grub = {
     efiSupport = true;
     efiInstallAsRemovable = true;
@@ -17,11 +22,20 @@
   services.openssh.enable = true;
   users.users.root.openssh.authorizedKeys.keys = import ./keys.nix;
 
+  services.typhon = {
+    enable = true;
+    hashedPasswordFile = "${./hash.txt}";
+  };
+
   services.nginx = {
     enable = true;
     virtualHosts."etna.typhon-ci.org" = {
       addSSL = true;
       enableACME = true;
+      locations."/" = {
+        recommendedProxySettings = true;
+        proxyPass = "http://localhost:3000";
+      };
     };
   };
 
