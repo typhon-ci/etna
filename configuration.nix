@@ -30,7 +30,7 @@
   services.nginx = {
     enable = true;
     virtualHosts."etna.typhon-ci.org" = {
-      addSSL = true;
+      forceSSL = true;
       enableACME = true;
       locations."/" = {
         recommendedProxySettings = true;
