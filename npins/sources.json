@@ -1,0 +1,29 @@
+{
+  "pins": {
+    "disko": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nix-community",
+        "repo": "disko"
+      },
+      "branch": "master",
+      "revision": "f720e64ec37fa16ebba6354eadf310f81555cc07",
+      "url": "https://github.com/nix-community/disko/archive/f720e64ec37fa16ebba6354eadf310f81555cc07.tar.gz",
+      "hash": "1zrwfphx4s56vgxyc7am4b6ky68l6zy3w9gfig4pgdcc1cys24pj"
+    },
+    "nixpkgs": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nixos",
+        "repo": "nixpkgs"
+      },
+      "branch": "nixos-24.11",
+      "revision": "9c6b49aeac36e2ed73a8c472f1546f6d9cf1addc",
+      "url": "https://github.com/nixos/nixpkgs/archive/9c6b49aeac36e2ed73a8c472f1546f6d9cf1addc.tar.gz",
+      "hash": "0zwnaiw6cryrvwxxa96f72p4w75wq2miyi066f2sk8n7ivj0kxcb"
+    }
+  },
+  "version": 3
+}
